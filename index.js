@@ -1,4 +1,13 @@
 function fetchBooks() {
+ return fetch ('https://anapioficeandfire.com/api/books')
+.then(function(res){
+  return res.json()
+})
+.then(function(json){
+  renderBooks(json)
+  console.log("this is the response", json[4])
+})
+
 
 }
 
